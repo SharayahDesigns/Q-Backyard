@@ -14,3 +14,31 @@ gems third party libraries that do stuff
 
 > NOTE: to add a gem add it to the gemfile, then run bundle to install gem
 
+## devise_token_auth setup
+1. add gem to gemfile
+```
+
+# using this in our gemfile (might want to use version <6.2 of rails>)
+gem 'devise_token_auth', '>= 1.2.0' , git "https://github.com/lynndylanhurley/devise_token_auth"
+```
+
+2. create a model 
+```
+#  this creates a devise 'User' model and some routes
+rails g devise_token_auth:install User api/auth
+```
+3. add extends in model
+```
+class User < ActiveRecord::Base
+extend Devise::Models
+...
+```
+
+4. add columns to our User via a migration 
+```
+# this creates a migration file called add_trackable_to_users
+rails g migration add_trackable_to_users
+```
+```
+rails db:migrate
+```
