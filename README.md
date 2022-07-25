@@ -1,4 +1,4 @@
-## Starter setup
+## How I set up Starter project
 
 ## rails setup (back-end)
 ```
@@ -42,3 +42,19 @@ rails g migration add_trackable_to_users
 ```
 rails db:migrate
 ```
+## front-end setup
+
+in rails project create react-app 
+```
+yarn create react-app client
+```
+## add third party libraries
+
+## add proxy
+## add Folder structure
+```
+mkdir src/components
+mkdir src/providers
+mkir src/hooks
+mkdir src/components/auth
+mkdir src/components/shared
