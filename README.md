@@ -58,3 +58,9 @@ mkdir src/providers
 mkir src/hooks
 mkdir src/components/auth
 mkdir src/components/shared
+```
+## React router setup
+
+- add routes to index.js/app.js
+- index js wrap with browserRouter
+- create navbar
